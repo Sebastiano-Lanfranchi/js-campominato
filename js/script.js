@@ -9,39 +9,27 @@
 // raggiunge il numero massimo possibile di numeri consentiti.
 // Al termine della partita il software deve comunicare il punteggio,
 // cioè il numero di volte che l’utente ha inserito un numero consentito.
-var numeriPc = [];
-var i;
-var randomIndex;
-var numeroInserito = prompt('inserisci un numero da 1 a 100 fino a quando non vinci');
-
 function randomNumber(min, max) {
   var random = Math.floor( Math.random() * (max - min +1) ) + min;
   return random;
 }
 
-function riempitore(num) {
-  let arr = [];
-for ( i = 0;i < num ; i++){
-arr.push(i+1);
+var numeriPc = [];
 
-}
-return arr;
-}
 
-function contains(a, obj) {
-    for (var i = 0; i < a.length; i++) {
-        if (a[i] === obj) {
-            return true;
-        }
-    }
-    return false;
+for(var x=0; x<16; x++){
+  numeriPc.push(randomNumber(1,100))
+ if(numeriPc.includes(randomNumber)){
+   continue;
+ }
 }
 
-
-for(let x=0; x<16; x++){
- numeriPc.push(randomNumber(1,100));
+for(var i = 0; i<= 84; i++){
+  var numeroInserito = parseInt(prompt('inserisci un numero da 1 a 100 fino a quando non vinci'));
+  if(numeriPc.includes(numeroInserito)){
+    alert('Hai perso '+'hai totalizzato ' + i +' punti');
+  }
+  else{
+    continue;
+  }
 }
-
-
-
-while(contains(numeroInserito, numeriPc));
