@@ -28,6 +28,7 @@ for(var i = 0; i<= 84; i++){
   var numeroInserito = parseInt(prompt('inserisci un numero da 1 a 100 fino a quando non vinci'));
   if(numeriPc.includes(numeroInserito)){
     alert('Hai perso '+'hai totalizzato ' + i +' punti');
+    breack
   }
   else{
     continue;
